@@ -21,9 +21,10 @@ kanan agar tepi monitor tidak terpotong, lalu dikonversi ke WebP kualitas 86
 (method 6). Dipakai sebagai gambar hero ZW3D.
 
 `zwcad-hero.webp` berasal dari background hero resmi ZWCAD (3840×1660) di
-<https://www.zwsoft.com/product/zwcad>. Crop `(2310, 60, 3840, 1260)` mengambil
-fasad parametrik, toolbar, dan Parameters Manager sampai tepi kanannya, lalu
-dikonversi ke WebP kualitas 86 (method 6). Dipakai sebagai gambar hero ZWCAD.
+<https://www.zwsoft.com/product/zwcad>. Crop `(1850, 0, 3840, 1560)` memuat
+gedung di tengah frame, toolbar, dan Parameters Manager sampai tepi kanannya,
+lalu diperkecil ke 1530×1200 dan dikonversi ke WebP kualitas 86 (method 6).
+Dipakai sebagai gambar hero ZWCAD.
 
 > Catatan: aset ini milik ZWSOFT dan dipakai sebagai materi pemasaran produk.
 > Konfirmasi ulang hak pemakaian dengan principal sebelum publikasi permanen.
