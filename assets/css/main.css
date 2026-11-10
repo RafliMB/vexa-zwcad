@@ -3398,15 +3398,16 @@ html[data-theme="dark"] .field textarea::placeholder { color: #7f96b4; }
   align-items: center;
   height: 56px;
   border-radius: 2px;
-  background: var(--ink);
-  color: var(--paper);
+  background: #25d366;
+  color: #052715;
   text-decoration: none;
   overflow: hidden;
   box-shadow: 6px 6px 0 rgba(8, 26, 51, 0.16);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transition: background 0.2s, transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .wa-float:hover {
+  background: #1fc25a;
   transform: translate(-2px, -2px);
   box-shadow: 9px 9px 0 rgba(8, 26, 51, 0.2);
 }
