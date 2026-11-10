@@ -2487,6 +2487,80 @@ html[data-theme="dark"] .footer__giant { --giant-hatch: rgba(232, 241, 253, 0.45
 
 .cta-band__actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
+/* ---------- Location section ---------- */
+.location-section { background: transparent; }
+
+.location-section__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+
+.location-section h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); }
+
+.location-section__lead {
+  margin-top: 14px;
+  max-width: 40ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.location-card {
+  margin-top: clamp(20px, 3vw, 30px);
+  padding-top: clamp(18px, 2.4vw, 26px);
+  border-top: 1px solid var(--line);
+}
+
+.location-card h3 {
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.location-card address {
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.location-card__meta {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.location-card__meta a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.location-card__meta a:hover { color: var(--accent-text); border-bottom-color: var(--accent); }
+
+.location-card__foot { margin-top: 20px; }
+
+.location-map {
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-2);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Product switch (hero) */
 .product-switch {
   display: inline-flex;
@@ -3103,6 +3177,9 @@ html[data-theme="dark"] .footer__giant { --giant-hatch: rgba(232, 241, 253, 0.45
   .form-grid { grid-template-columns: 1fr; }
 
   .cta-band__inner { flex-direction: column; align-items: flex-start; }
+  .location-section__grid { grid-template-columns: 1fr; }
+  .location-map { aspect-ratio: 16 / 10; }
+
   .cta-band--media::before {
     background: linear-gradient(180deg,
       rgba(8, 26, 51, 0.94) 0%,
