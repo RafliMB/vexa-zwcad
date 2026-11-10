@@ -3423,6 +3423,7 @@ html[data-theme="dark"] .field textarea::placeholder { color: #7f96b4; }
   width: 56px;
   height: 56px;
   flex: none;
+  color: #ffffff;
 }
 
 .wa-float__icon svg { width: 26px; height: 26px; fill: currentColor; }
