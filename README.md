@@ -30,6 +30,10 @@ Repo ini statis. Set root directory ke `/`, tanpa build step. `index.html`
 adalah entry point. Tidak ada dependensi eksternal selain Google Fonts dan
 video demo ZWSOFT.
 
+Link ke halaman produk lain diarahkan ke `https://vexatekno.com/...` karena
+tiap produk punya repo sendiri. Ganti ke URL deployment masing-masing kalau
+kedua repo dipasang di domain terpisah.
+
 ## Catatan SEO
 
 - `<title>`, description, canonical, robots, Open Graph, dan JSON-LD ada di
