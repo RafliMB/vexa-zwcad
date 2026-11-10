@@ -1419,11 +1419,18 @@ div[id] { scroll-margin-top: 146px; }
   letter-spacing: -0.06em;
   color: transparent;
   -webkit-text-stroke: 1px var(--line-strong);
+  --giant-hatch: rgba(8, 26, 51, 0.5);
+  background-image: repeating-linear-gradient(45deg, var(--giant-hatch) 0 2px, transparent 2px 8px);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: clamp(28px, 4vw, 52px);
   user-select: none;
   white-space: nowrap;
   overflow: hidden;
 }
+
+html[data-theme="dark"] .footer__giant { --giant-hatch: rgba(232, 241, 253, 0.45); }
 
 /* ---------- Product page: hero ---------- */
 .page-hero {
@@ -3336,7 +3343,7 @@ html[data-theme="dark"] .field textarea::placeholder { color: #7f96b4; }
 
 .plan-strip__row {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.6fr) auto;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.6fr) auto auto;
   gap: 18px;
   align-items: center;
   padding: 14px 16px;
@@ -3359,13 +3366,33 @@ html[data-theme="dark"] .field textarea::placeholder { color: #7f96b4; }
 .plan-strip__price a { color: var(--accent-text); text-decoration: none; }
 .plan-strip__price a:hover { text-decoration: underline; }
 
+.plan-strip__cta {
+  min-height: 40px;
+  padding: 10px 14px;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
 @media (max-width: 1100px) {
   .license-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@media (max-width: 900px) {
+  .plan-strip__row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 8px;
+    column-gap: 14px;
+  }
+  .plan-strip__name { grid-column: 1; grid-row: 1; }
+  .plan-strip__price { grid-column: 2; grid-row: 1; text-align: right; }
+  .plan-strip__desc { grid-column: 1 / -1; grid-row: 2; }
+  .plan-strip__cta { grid-column: 1 / -1; grid-row: 3; justify-self: start; }
+}
+
 @media (max-width: 700px) {
   .license-grid--four { grid-template-columns: 1fr; }
-  .plan-strip__row { grid-template-columns: 1fr; gap: 6px; }
 }
 
 .license-grid--four .license { padding: clamp(18px, 2.2vw, 26px); }
