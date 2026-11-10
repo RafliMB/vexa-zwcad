@@ -535,6 +535,33 @@ div[id] { scroll-margin-top: 146px; }
   line-height: 1.7;
 }
 
+/* Hero media: an official ZWSOFT still replaces the drawn blueprint.
+   The plate keeps its hard border and offset shadow, but the grid and the
+   inner rule are dropped so the render sits edge to edge. */
+.blueprint--media {
+  background-image: none;
+  background-color: var(--ink);
+}
+
+.blueprint--media::before { display: none; }
+
+.blueprint__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1530 / 1200;
+  object-fit: cover;
+}
+
+.blueprint--media .bp-caption {
+  padding: 6px 9px;
+  background: rgba(244, 248, 255, 0.94);
+  border: 1px solid rgba(8, 26, 51, 0.28);
+  box-shadow: 3px 3px 0 rgba(8, 26, 51, 0.16);
+  color: var(--night);
+  z-index: 2;
+}
+
 /* Drawing animation */
 .draw-path {
   stroke-dasharray: var(--len, 1200);
