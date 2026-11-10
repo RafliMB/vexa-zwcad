@@ -3397,19 +3397,18 @@ html[data-theme="dark"] .field textarea::placeholder { color: #7f96b4; }
   display: inline-flex;
   align-items: center;
   height: 56px;
-  border-radius: 999px;
-  background: #0f7a3a;
-  color: #ffffff;
+  border-radius: 2px;
+  background: var(--ink);
+  color: var(--paper);
   text-decoration: none;
   overflow: hidden;
-  box-shadow: 0 12px 28px rgba(8, 26, 51, 0.24), 0 2px 6px rgba(8, 26, 51, 0.16);
-  transition: background 0.2s, box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+  box-shadow: 6px 6px 0 rgba(8, 26, 51, 0.16);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .wa-float:hover {
-  background: #0b6530;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(8, 26, 51, 0.3), 0 2px 6px rgba(8, 26, 51, 0.18);
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(8, 26, 51, 0.2);
 }
 
 .wa-float:focus-visible {
@@ -3425,33 +3424,29 @@ html[data-theme="dark"] .field textarea::placeholder { color: #7f96b4; }
   flex: none;
 }
 
-.wa-float__icon svg { width: 27px; height: 27px; fill: currentColor; }
+.wa-float__icon svg { width: 26px; height: 26px; fill: currentColor; }
 
 .wa-float__label {
-  max-width: 0;
-  padding-right: 0;
-  overflow: hidden;
+  padding-right: 20px;
   font-family: var(--font-mono);
   font-size: 10px;
+  line-height: 1;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   white-space: nowrap;
-  opacity: 0;
-  transition: max-width 0.3s var(--ease), opacity 0.2s, padding-right 0.3s var(--ease);
 }
 
-.wa-float:hover .wa-float__label,
-.wa-float:focus-visible .wa-float__label {
-  max-width: 200px;
-  padding-right: 22px;
-  opacity: 1;
-}
+html[data-theme="dark"] .wa-float { box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45); }
+html[data-theme="dark"] .wa-float:hover { box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.55); }
 
-@media (max-width: 700px) {
-  .wa-float__label { display: none; }
+@media (max-width: 480px) {
+  .wa-float { height: 50px; }
+  .wa-float__icon { width: 50px; height: 50px; }
+  .wa-float__icon svg { width: 23px; height: 23px; }
+  .wa-float__label { font-size: 9px; padding-right: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wa-float, .wa-float__label { transition: none; }
+  .wa-float { transition: none; }
   .wa-float:hover { transform: none; }
 }
