@@ -2130,19 +2130,25 @@ html[data-theme="dark"] .vxpage.vxpage .footer__giant{ --giant-hatch: rgba(232, 
 }
 .vxpage.vxpage .cta-band__actions{ display: flex; flex-wrap: wrap; gap: 12px; }
 
-.vxpage.vxpage .location-section{ background: transparent; }
-.vxpage.vxpage .location-section__grid{ display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
-.vxpage.vxpage .location-section h2{ font-size: clamp(1.9rem, 3.4vw, 3rem); }
-.vxpage.vxpage .location-section__lead{ margin-top: 14px; max-width: 40ch; color: var(--muted); font-size: .95rem; }
-.vxpage.vxpage .location-card{ margin-top: clamp(20px, 3vw, 30px); padding-top: clamp(18px, 2.4vw, 26px); border-top: 1px solid var(--line); }
-.vxpage.vxpage .location-card h3{ font-size: 1.05rem; letter-spacing: -0.01em; }
-.vxpage.vxpage .location-card address{ margin-top: 10px; font-style: normal; font-size: .95rem; line-height: 1.7; color: var(--ink-soft); }
-.vxpage.vxpage .location-card__meta{ margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: .9rem; }
-.vxpage.vxpage .location-card__meta a{ color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; transition: color .2s var(--ease), border-color .2s var(--ease); }
-.vxpage.vxpage .location-card__meta a:hover{ color: var(--accent-text); border-bottom-color: var(--accent); }
-.vxpage.vxpage .location-card__foot{ margin-top: 20px; }
-.vxpage.vxpage .location-map{ margin: 0; border: 1px solid var(--line-strong); background: var(--paper-2); aspect-ratio: 4 / 3; overflow: hidden; }
-.vxpage.vxpage .location-map iframe{ display: block; width: 100%; height: 100%; border: 0; }
+.vxpage.vxpage .location-section .section-head{ margin-bottom: clamp(26px, 3.4vw, 44px); }
+.vxpage.vxpage .location-section .section-head h2{ margin-top: 14px; }
+.vxpage.vxpage .location-panel{ display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); border: 1px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(0, 88, 248, 0.14); }
+html[data-theme="dark"] .vxpage.vxpage .location-panel{ box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.45); }
+.vxpage.vxpage .location-panel__body{ display: flex; flex-direction: column; gap: clamp(20px, 2.4vw, 30px); padding: clamp(22px, 2.8vw, 40px); min-width: 0; }
+.vxpage.vxpage .location-panel__eyebrow{ display: block; font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.vxpage.vxpage .location-panel__body h3{ margin-top: 10px; font-size: clamp(1.15rem, 1.5vw, 1.45rem); line-height: 1.2; letter-spacing: -.02em; }
+.vxpage.vxpage .location-rows{ margin: 0; }
+.vxpage.vxpage .location-row{ display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+.vxpage.vxpage .location-row:last-of-type{ border-bottom: 1px solid var(--line); }
+.vxpage.vxpage .location-row dt{ padding-top: 5px; font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.vxpage.vxpage .location-row dd{ margin: 0; font-size: .95rem; line-height: 1.65; color: var(--ink-soft); }
+.vxpage.vxpage .location-row dd a{ color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; transition: color .2s var(--ease), border-color .2s var(--ease); }
+.vxpage.vxpage .location-row dd a:hover{ color: var(--accent-text); border-bottom-color: var(--accent); }
+.vxpage.vxpage .location-panel__body .btn{ align-self: flex-start; margin-top: auto; }
+.vxpage.vxpage .location-panel__map{ position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto; margin: 0; min-height: 400px; border-left: 1px solid var(--ink); background: var(--paper-2); overflow: hidden; }
+.vxpage.vxpage .location-panel__map iframe{ display: block; width: 100%; height: 100%; min-height: 300px; border: 0; }
+.vxpage.vxpage .location-panel__map figcaption{ display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 9px 12px; border-top: 1px solid var(--ink); background: var(--cream); font-family: var(--font-mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.vxpage.vxpage .location-panel__map figcaption span:first-child{ color: var(--ink); }
 .vxpage.vxpage .product-switch{
   display: inline-flex;
   align-items: center;
@@ -2638,8 +2644,9 @@ html[data-theme="dark"] .vxpage.vxpage .footer__giant{ --giant-hatch: rgba(232, 
 .vxpage.vxpage .advantage-grid{ grid-template-columns: 1fr; }
 .vxpage.vxpage .form-grid{ grid-template-columns: 1fr; }
 .vxpage.vxpage .cta-band__inner{ flex-direction: column; align-items: flex-start; }
-  .vxpage.vxpage .location-section__grid{ grid-template-columns: 1fr; }
-  .vxpage.vxpage .location-map{ aspect-ratio: 16 / 10; }
+  .vxpage.vxpage .location-panel{ grid-template-columns: 1fr; }
+  .vxpage.vxpage .location-panel__map{ min-height: 0; border-left: 0; border-top: 1px solid var(--ink); }
+  .vxpage.vxpage .location-panel__map iframe{ min-height: 0; height: auto; aspect-ratio: 16 / 10; }
 .vxpage.vxpage .cta-band--media::before{
     background: linear-gradient(180deg,
       rgba(8, 26, 51, 0.94) 0%,
@@ -2658,6 +2665,8 @@ html[data-theme="dark"] .vxpage.vxpage .footer__giant{ --giant-hatch: rgba(232, 
 .vxpage.vxpage .hero__actions .btn, .vxpage.vxpage .page-hero__actions .btn{ flex: 1 1 100%; }
 .vxpage.vxpage .cta-band__actions{ width: 100%; }
 .vxpage.vxpage .cta-band__actions .btn{ flex: 1 1 100%; }
+  .vxpage.vxpage .location-row{ grid-template-columns: 1fr; gap: 5px; }
+  .vxpage.vxpage .location-row dt{ padding-top: 0; }
 .vxpage.vxpage .spec-strip{ grid-template-columns: 1fr; }
 .vxpage.vxpage .spec-strip div{ border-right: 0; border-top: 1px solid var(--line); }
 .vxpage.vxpage .spec-strip div:first-child{ border-top: 0; }
@@ -3572,29 +3581,43 @@ html[data-theme="dark"] .vxpage.vxpage .field input::placeholder, html[data-them
         </section>
 
         <section class="section location-section" id="vx-lokasi" aria-labelledby="vx-lokasi-title">
-          <div class="container location-section__grid">
-            <div>
-              <span class="section-index">Kantor &amp; lokasi</span>
-              <h2 id="vx-lokasi-title">Mampir ke kantor kami.</h2>
-              <p class="location-section__lead">Tim sales dan technical support kami berbasis di Bekasi. Silakan berkunjung untuk konsultasi lisensi, demo produk, atau diskusi implementasi.</p>
-              <div class="location-card">
-                <h3>PT Vexa Dinamika Teknologi</h3>
-                <address>
-                  Plaza Summarecon Bekasi, Lantai 6<br>
-                  Jl. Bulevar Ahmad Yani<br>
-                  Bekasi 17143, Indonesia
-                </address>
-                <ul class="location-card__meta">
-                  <li><a href="https://wa.me/6281902244660" target="_blank" rel="noopener">WhatsApp +62 819-0224-4660</a></li>
-                  <li><a href="mailto:krisna@vexatekno.com">krisna@vexatekno.com</a></li>
-                </ul>
-                <div class="location-card__foot">
-                  <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=PT%20Vexa%20Dinamika%20Teknologi%2C%20Plaza%20Summarecon%20Bekasi" target="_blank" rel="noopener">Buka di Google Maps <span class="arrow" aria-hidden="true">↗</span></a>
-                </div>
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <span class="section-index">Kantor &amp; lokasi</span>
+                <h2 id="vx-lokasi-title">Mampir ke kantor kami.</h2>
               </div>
+              <p class="lead">Tim sales dan technical support kami berbasis di Bekasi. Silakan berkunjung untuk konsultasi lisensi, demo produk, atau diskusi implementasi.</p>
             </div>
-            <div class="location-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89289979356457!2d106.99658913462679!3d-6.225919085650622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f32dc64735c3%3A0x82b59023bc120808!2sPT%20Vexa%20Dinamika%20Teknologi!5e0!3m2!1sid!2sid!4v1794302669846!5m2!1sid!2sid" title="Peta lokasi kantor PT Vexa Dinamika Teknologi di Plaza Summarecon Bekasi" width="600" height="450" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="location-panel">
+              <div class="location-panel__body">
+                <div>
+                  <span class="location-panel__eyebrow">Kantor pusat</span>
+                  <h3>PT Vexa Dinamika Teknologi</h3>
+                </div>
+                <dl class="location-rows">
+                  <div class="location-row">
+                    <dt>Alamat</dt>
+                    <dd>Plaza Summarecon Bekasi, Lantai 6<br>Jl. Bulevar Ahmad Yani<br>Bekasi 17143, Indonesia</dd>
+                  </div>
+                  <div class="location-row">
+                    <dt>Telepon</dt>
+                    <dd><a href="https://wa.me/6281902244660" target="_blank" rel="noopener">+62 819-0224-4660</a></dd>
+                  </div>
+                  <div class="location-row">
+                    <dt>Email</dt>
+                    <dd><a href="mailto:krisna@vexatekno.com">krisna@vexatekno.com</a></dd>
+                  </div>
+                </dl>
+                <a class="btn btn--solid" href="https://www.google.com/maps/search/?api=1&query=PT%20Vexa%20Dinamika%20Teknologi%2C%20Plaza%20Summarecon%20Bekasi" target="_blank" rel="noopener">Buka di Google Maps <span class="arrow" aria-hidden="true">↗</span></a>
+              </div>
+              <figure class="location-panel__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89289979356457!2d106.99658913462679!3d-6.225919085650622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f32dc64735c3%3A0x82b59023bc120808!2sPT%20Vexa%20Dinamika%20Teknologi!5e0!3m2!1sid!2sid!4v1794302669846!5m2!1sid!2sid" title="Peta lokasi kantor PT Vexa Dinamika Teknologi di Plaza Summarecon Bekasi" width="600" height="450" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <figcaption>
+                  <span>Plaza Summarecon Bekasi · Lantai 6</span>
+                  <span>−6.2259, 106.9966</span>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
