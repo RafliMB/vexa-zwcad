@@ -1747,27 +1747,20 @@
 .vxpage.vxpage .cap-item summary:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
 .vxpage.vxpage .cap-item summary strong{ color: var(--ink); font-weight: 600; }
 .vxpage.vxpage .cap-item summary::after{
-  content: "+";
+  content: ">";
   flex: none;
   display: grid;
   place-items: center;
   width: 20px;
   height: 20px;
   margin-top: 1px;
-  border: 1px solid var(--line-strong);
-  border-radius: 50%;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1;
   color: var(--ink);
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: transform 0.25s var(--ease);
 }
-.vxpage.vxpage .cap-item[open] summary::after{
-  content: "−";
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--on-accent);
-}
+.vxpage.vxpage .cap-item[open] summary::after{ transform: rotate(90deg); }
 .vxpage.vxpage .cap-item__body{
   padding: 0 34px 14px 0;
   animation: vx-fadeUp 0.3s var(--ease);
